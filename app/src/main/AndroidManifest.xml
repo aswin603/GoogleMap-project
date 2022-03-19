@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.aswin.project.googlemap_aswin">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -10,10 +11,12 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
+        android:usesCleartextTraffic="true"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.GoogleMapAswin">
+        android:theme="@style/Theme.GoogleMapAswin"
+        tools:targetApi="m">
         <activity
             android:name=".DetailsActivty"
             android:exported="false" />
@@ -30,7 +33,10 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCMNPXQJCC9NxJsSLgaKB16Ez7InxWLveQ" />
+            android:value="@string/map_api_key" />
+        <!--Google map api key is not added in this project-->
+
+
 
         <activity
             android:name=".MapsActivity"
